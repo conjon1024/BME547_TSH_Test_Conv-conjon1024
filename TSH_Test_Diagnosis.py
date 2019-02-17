@@ -1,4 +1,5 @@
 # TSH_Test_Diagnosis.py
+import json
 
 
 def main():
@@ -22,13 +23,8 @@ def sort_data():
                 gender = TSH_genders(line)
             elif count == entry + 3:
                 (TSH_sorted_numbers, diagnosis) = TSH_diagnosis(line)
-                new_dictionary = {"First Name": first,
-                                  "Last Name": last,
-                                  "Age": age,
-                                  "Gender": gender,
-                                  "Diagnosis": diagnosis,
-                                  "TSH": TSH_sorted_numbers}
-                print(new_dictionary)
+                create_dictionary(first, last, age, gender,
+                                  diagnosis, TSH_sorted_numbers)
                 entry += 4
             count += 1
 
@@ -73,6 +69,18 @@ def TSH_diagnosis(line):
     if normal:
         diagnosis = "normal thyroid function"
     return (TSH_sorted_numbers, diagnosis)
+
+
+def create_dictionary(first, last, age, gender, diagnosis, TSH_sorted_numbers):
+    new_dictionary = {"First Name": first,
+                      "Last Name": last,
+                      "Age": age,
+                      "Gender": gender,
+                      "Diagnosis": diagnosis,
+                      "TSH": TSH_sorted_numbers}
+    out_file = open("{}-{}.json".format(first, last), "w")
+    json.dump(new_dictionary, out_file)
+    out_file.close()
 
 if __name__ == "__main__":
     main()
