@@ -8,12 +8,6 @@ def main():
 def sort_data():
     with open("test_data.txt", "r") as TSH_Contents:
 
-        names = []
-        ages = []
-        genders = []
-        # values = []
-        # numbers = []
-
         count = 0  # where in the file we are
         entry = 0  # the first line we want to access
 
@@ -21,38 +15,46 @@ def sort_data():
             if line == "END":
                 break
             if count == entry:
-                TSH_names(line, names)
+                (first, last) = TSH_names(line)
             elif count == entry + 1:
-                TSH_ages(line, ages)
+                age = TSH_ages(line)
             elif count == entry + 2:
-                TSH_genders(line, genders)
+                gender = TSH_genders(line)
             elif count == entry + 3:
-                diagnosis = TSH_diagnosis(line)
+                (TSH_sorted_numbers, diagnosis) = TSH_diagnosis(line)
+                new_dictionary = {"First Name": first,
+                                  "Last Name": last,
+                                  "Age": age,
+                                  "Gender": gender,
+                                  "Diagnosis": diagnosis,
+                                  "TSH": TSH_sorted_numbers}
+                print(new_dictionary)
                 entry += 4
             count += 1
 
 
-def TSH_names(line, names):
+def TSH_names(line):
     name = line.strip()
-    names.append(name)
+    first = name.split(' ', 1)[0]
+    last = name.split(' ', 1)[1]
+    return (first, last)
 
 
-def TSH_ages(line, ages):
+def TSH_ages(line):
     age = line.strip()
-    ages.append(age)
+    return age
 
 
-def TSH_genders(line, genders):
+def TSH_genders(line):
     gender = line.strip()
-    genders.append(gender)
+    return gender
 
 
 def TSH_diagnosis(line):
     TSH_results = line.strip()
-    # values.append(TSH_results)
     TSH_line = [s for s in TSH_results.split(",")]
     TSH_numbers = [float(s) for s in TSH_line[1:]]
-    # numbers.append(TSH_numbers)
+    TSH_sorted_numbers = sorted(TSH_numbers)
 
     hypo = False
     hyper = False
@@ -66,14 +68,11 @@ def TSH_diagnosis(line):
             normal = False
     if hypo:
         diagnosis = "hypothyroidism"
-        print("The patient has hypothyroidism")
     if hyper:
         diagnosis = "hyperthyroidism"
-        print("The patient has hyperthyroidism")
     if normal:
         diagnosis = "normal thyroid function"
-        print("The patient has normal thyroid function")
-    return diagnosis
+    return (TSH_sorted_numbers, diagnosis)
 
 if __name__ == "__main__":
     main()
