@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>test_TSH_Test_Diagnosis module &#8212; TSH Test Data Conversion 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="TSH_Test_Diagnosis module" href="TSH_Test_Diagnosis.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-test_TSH_Test_Diagnosis">
+<span id="test-tsh-test-diagnosis-module"></span><h1>test_TSH_Test_Diagnosis module<a class="headerlink" href="#module-test_TSH_Test_Diagnosis" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="test_TSH_Test_Diagnosis.test_TSH_diagnosis_hyper">
+<code class="descclassname">test_TSH_Test_Diagnosis.</code><code class="descname">test_TSH_diagnosis_hyper</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_TSH_Test_Diagnosis.test_TSH_diagnosis_hyper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unit test for a list of TSH values corresponding to hyperthyroidism</p>
+<p>This function is a unit test that receives a string of TSH values and tests
+whether the TSH_diagnosis code correctly orders the test results from low
+to high and outputs the correct diagnosis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>line</strong> (<em>str</em>) – line containing TSH test results</li>
+<li><strong>diagnosis</strong> (<em>str</em>) – asserted patient diagnosis</li>
+<li><strong>TSH_sorted_numbers</strong> (<em>list</em>) – asserted sorted test results (low to high)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="test_TSH_Test_Diagnosis.test_TSH_diagnosis_hypo">
+<code class="descclassname">test_TSH_Test_Diagnosis.</code><code class="descname">test_TSH_diagnosis_hypo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_TSH_Test_Diagnosis.test_TSH_diagnosis_hypo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unit test for a list of TSH values corresponding to hypothyroidism</p>
+<p>This function is a unit test that receives a string of TSH values and tests
+whether the TSH_diagnosis code correctly orders the test results from low
+to high and outputs the correct diagnosis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>line</strong> (<em>str</em>) – line containing TSH test results</li>
+<li><strong>diagnosis</strong> (<em>str</em>) – asserted patient diagnosis</li>
+<li><strong>TSH_sorted_numbers</strong> (<em>list</em>) – asserted sorted test results (low to high)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="test_TSH_Test_Diagnosis.test_TSH_diagnosis_normal">
+<code class="descclassname">test_TSH_Test_Diagnosis.</code><code class="descname">test_TSH_diagnosis_normal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_TSH_Test_Diagnosis.test_TSH_diagnosis_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unit test for a list of normal TSH values</p>
+<p>This function is a unit test that receives a string of TSH values and tests
+whether the TSH_diagnosis code correctly orders the test results from low
+to high and outputs the correct diagnosis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>line</strong> (<em>str</em>) – line containing TSH test results</li>
+<li><strong>diagnosis</strong> (<em>str</em>) – asserted patient diagnosis</li>
+<li><strong>TSH_sorted_numbers</strong> (<em>list</em>) – asserted sorted test results (low to high)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">TSH Test Data Conversion</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="TSH_Test_Diagnosis.html">TSH_Test_Diagnosis module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">test_TSH_Test_Diagnosis module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="TSH_Test_Diagnosis.html" title="previous chapter">TSH_Test_Diagnosis module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Connor Johnson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/test_TSH_Test_Diagnosis.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
