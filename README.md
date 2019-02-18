@@ -12,8 +12,10 @@ For each line containing TSH test results, the code first pulls the line out. Th
 
 The create_dictionary() function creates a dictionary containing the following keys and their corresponding values from the subfunctions: First Name, Last Name, Age, Gender, Diagnosis, and TSH (containing a list of all of the test results). From this dictionary, information was created and output in the form of a JSON file for each patient. Therefore, ten JSON files were created.
 
-A virtual environment called TSH_Env was used for the project, and the requirements.txt file contains the pytest and pytest-pep8 packages.
+A virtual environment called TSH_Env was used for the project, and the requirements.txt file contains the pytest, pytest-pep8, and sphinx packages.
 
 Several unit tests were written in test_TSH_Test_Diagnosis.py to test the ability of the TSH_Test_Diagnosis.py script to take a string of TSH values and correctly order the test results from low to high and output the correct diagnosis. A string corresponding to a normal, hyperthyroid, and hypothyroid state were written. The output of the function is compared with the asserted answer using the assert command. The tests can be run with the command, "pytest -v".
 
 To check if the modules comply with PEP-8 Style Guide, the command "pytest -v --pep8" can be typed into the terminal. TravisCI was enabled and used in the repository, and feature branches were merged with the master branch only after TravisCI reported a passing status.
+
+Sphinx documentation was created and the resulting .html files were pushed to the GitHub repository.
